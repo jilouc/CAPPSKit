@@ -7,6 +7,7 @@
 //
 
 #import "UIColor+CAPPS7Kit.h"
+#import "CAPPSKitMacros.h"
 
 @implementation UIColor (CAPPS7Kit)
 
