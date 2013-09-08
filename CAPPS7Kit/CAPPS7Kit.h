@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CAPPSKitMacros.h"
 #import "UIColor+CAPPS7Kit.h"
 
 @interface CAPPS7Kit : NSObject
