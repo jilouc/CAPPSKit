@@ -77,7 +77,7 @@ const CGSize    CAPPS7KitUIControlRadiusSize = {4.0f, 4.0f};
                                                              style:UIBarButtonItemStylePlain
                                                             target:nil
                                                             action:nil];
-    [item setBackgroundImage:[[[UIImage imageNamed:@"CAPPSBack"]
+    [item setBackgroundImage:[[[UIImage imageNamed:@"CAPPS7Kit.bundle/CAPPSBack"]
                                capps_imageWithOverlayColor:[CAPPS7Kit shared7Kit].tintColor]
                               resizableImageWithCapInsets:UIEdgeInsetsMake(0, 9, 0, 0)]
                     forState:UIControlStateNormal
@@ -99,9 +99,9 @@ const CGSize    CAPPS7KitUIControlRadiusSize = {4.0f, 4.0f};
     
     [[UINavigationBar appearance] setTintColor:[UIColorFromRGB(0xf1f1f1) colorWithAlphaComponent:0.8]];
     
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"CAPPSNavigationBarBackground"]
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"CAPPS7Kit.bundle/CAPPSNavigationBarBackground"]
                                        forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setShadowImage:[UIImage imageNamed:@"CAPPSNavigationBarShadow"]];
+    [[UINavigationBar appearance] setShadowImage:[UIImage imageNamed:@"CAPPS7Kit.bundle/CAPPSNavigationBarShadow"]];
     
     [[UINavigationBar appearance] setTitleTextAttributes:@{
                                                            UITextAttributeFont: CAPPSNavigationItemTitleFont,
@@ -113,12 +113,12 @@ const CGSize    CAPPS7KitUIControlRadiusSize = {4.0f, 4.0f};
     
     [[UIToolbar appearance] setTintColor:[UIColorFromRGB(0xf1f1f1) colorWithAlphaComponent:0.8]];
     
-    [[UIToolbar appearance] setBackgroundImage:[UIImage imageNamed:@"CAPPSNavigationBarBackground"]
+    [[UIToolbar appearance] setBackgroundImage:[UIImage imageNamed:@"CAPPS7Kit.bundle/CAPPSNavigationBarBackground"]
                             forToolbarPosition:UIToolbarPositionAny
                                     barMetrics:UIBarMetricsDefault];
     
-    [[UIToolbar appearance] setShadowImage:[UIImage imageNamed:@"CAPPSNavigationBarShadow"] forToolbarPosition:UIToolbarPositionTop];
-    [[UIToolbar appearance] setShadowImage:[UIImage imageNamed:@"CAPPSToolbarShadow"] forToolbarPosition:UIToolbarPositionBottom];
+    [[UIToolbar appearance] setShadowImage:[UIImage imageNamed:@"CAPPS7Kit.bundle/CAPPSNavigationBarShadow"] forToolbarPosition:UIToolbarPositionTop];
+    [[UIToolbar appearance] setShadowImage:[UIImage imageNamed:@"CAPPS7Kit.bundle/CAPPSToolbarShadow"] forToolbarPosition:UIToolbarPositionBottom];
     
     // Segmented control
     
@@ -136,7 +136,7 @@ const CGSize    CAPPS7KitUIControlRadiusSize = {4.0f, 4.0f};
                                                                                         CAPPS7KitUIControlRadius,
                                                                                         CAPPS7KitUIControlRadius,
                                                                                         CAPPS7KitUIControlRadius)];
-    UIImage *backgroundImage = [UIImage imageNamed:@"CAPPSTransparent"];
+    UIImage *backgroundImage = [UIImage imageNamed:@"CAPPS7Kit.bundle/CAPPSTransparent"];
     
     NSDictionary *attributes = @{
                                  UITextAttributeFont: [UIFont fontWithName:CAPPSSystemFontMedium size:13.f],
@@ -165,11 +165,11 @@ const CGSize    CAPPS7KitUIControlRadiusSize = {4.0f, 4.0f};
     
     // Bar items
     
-    [[UIBarButtonItem appearance] setBackgroundImage:[UIImage imageNamed:@"CAPPSTransparent"]
+    [[UIBarButtonItem appearance] setBackgroundImage:[UIImage imageNamed:@"CAPPS7Kit.bundle/CAPPSTransparent"]
                                             forState:UIControlStateNormal
                                           barMetrics:UIBarMetricsDefault];
     
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[[[UIImage imageNamed:@"CAPPSBack"]
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[[[UIImage imageNamed:@"CAPPS7Kit.bundle/CAPPSBack"]
                                                                  capps_imageWithOverlayColor:tintColor]
                                                                 resizableImageWithCapInsets:UIEdgeInsetsMake(0, 9, 0, 0)]
                                                       forState:UIControlStateNormal
