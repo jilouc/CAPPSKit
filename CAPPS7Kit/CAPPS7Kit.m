@@ -9,6 +9,7 @@
 #import "CAPPS7Kit.h"
 #import "UIFont+CAPPSAdditions.h"
 #import "UIImage+CAPPSAdditions.h"
+#import "CAPPSKitMacros.h"
 
 const CGFloat   CAPPS7KitUIControlRadius = 4.0f;
 const CGSize    CAPPS7KitUIControlRadiusSize = {4.0f, 4.0f};
