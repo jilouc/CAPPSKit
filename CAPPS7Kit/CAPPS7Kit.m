@@ -78,7 +78,7 @@ const CGSize    CAPPS7KitUIControlRadiusSize = {4.0f, 4.0f};
                                                             target:nil
                                                             action:nil];
     [item setBackgroundImage:[[[UIImage imageNamed:@"CAPPSBack"]
-                               capps_imageWithOverlayColor:WTGPinkColor]
+                               capps_imageWithOverlayColor:[CAPPS7Kit shared7Kit].tintColor]
                               resizableImageWithCapInsets:UIEdgeInsetsMake(0, 9, 0, 0)]
                     forState:UIControlStateNormal
                   barMetrics:UIBarMetricsDefault];
@@ -170,7 +170,7 @@ const CGSize    CAPPS7KitUIControlRadiusSize = {4.0f, 4.0f};
                                           barMetrics:UIBarMetricsDefault];
     
     [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[[[UIImage imageNamed:@"CAPPSBack"]
-                                                                 capps_imageWithOverlayColor:WTGPinkColor]
+                                                                 capps_imageWithOverlayColor:tintColor]
                                                                 resizableImageWithCapInsets:UIEdgeInsetsMake(0, 9, 0, 0)]
                                                       forState:UIControlStateNormal
                                                     barMetrics:UIBarMetricsDefault];
