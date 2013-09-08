@@ -7,6 +7,7 @@
 //
 
 #import "CAPPS7Kit.h"
+#import "CAPPSKitMacros.h"
 #import "UIFont+CAPPSAdditions.h"
 #import "UIImage+CAPPSAdditions.h"
 #import "UIView+CAPPSAdditions.h"
