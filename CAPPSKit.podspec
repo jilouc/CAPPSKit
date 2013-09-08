@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary = 'Helper classes and categories to ease iOS6+ development.'
   s.homepage = 'https://github.com/jilouc/CAPPSKit'
   s.authors = { 'Jean-Luc Dagon' => 'jldagon@cocoapps.fr'}
-  s.source = { :git => 'https://github.com/jilouc/CAPPSKit.git' }
+  s.source = { :git => 'https://github.com/jilouc/CAPPSKit.git', :tag => "1.0"}
   s.source_files = '*.{h,m}'
 
   s.requires_arc = true
