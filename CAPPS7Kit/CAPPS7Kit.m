@@ -9,7 +9,7 @@
 #import "CAPPS7Kit.h"
 #import "UIFont+CAPPSAdditions.h"
 #import "UIImage+CAPPSAdditions.h"
-#import "UIWindow+CAPPSAdditions.h"
+#import "UIView+CAPPSAdditions.h"
 #import "CAPPSKitMacros.h"
 #import <QuartzCore/QuartzCore.h>
 
