@@ -1,0 +1,101 @@
+//
+//  UIFont+CAPPSAdditions.m
+//  Cocoapps Toolbox
+//
+//  Created by Jean-Luc Dagon on 19/06/13.
+//  Copyright (c) 2013 Cocoapps. All rights reserved.
+//
+
+#import "UIFont+CAPPSAdditions.h"
+
+static NSDictionary *_mapping;
+static NSMutableDictionary *_fontsMapping;
+
+NSString *const CAPPSSystemFont                     = @"HelveticaNeue";
+NSString *const CAPPSSystemFontFormat               = @"HelveticaNeue-%@";
+
+NSString *const CAPPSSystemFontRegular              = @"HelveticaNeue";
+NSString *const CAPPSSystemFontBold                 = @"HelveticaNeue-Bold";
+NSString *const CAPPSSystemFontItalic               = @"HelveticaNeue-Italic";
+NSString *const CAPPSSystemFontBoldItalic           = @"HelveticaNeue-BoldItalic";
+NSString *const CAPPSSystemFontMedium               = @"HelveticaNeue-Medium";
+NSString *const CAPPSSystemFontCondensedBold        = @"HelveticaNeue-CondensedBold";
+NSString *const CAPPSSystemFontCondensedBlack       = @"HelveticaNeue-CondensedBlack";
+NSString *const CAPPSSystemFontLight                = @"HelveticaNeue-Light";
+NSString *const CAPPSSystemFontLightItalic          = @"HelveticaNeue-LightItalic";
+NSString *const CAPPSSystemFontUltraLight           = @"HelveticaNeue-UltraLight";
+NSString *const CAPPSSystemFontUltraLightItalic     = @"HelveticaNeue-UltraLightItalic";
+
+NSString *const CAPPSFontTextStyleHeadline1         = @"CAPPSFontTextStyleHeadline1";
+NSString *const CAPPSFontTextStyleHeadline2         = @"CAPPSFontTextStyleHeadline2";
+NSString *const CAPPSFontTextStyleBody              = @"CAPPSFontTextStyleBody";
+NSString *const CAPPSFontTextStyleSubheadline1      = @"CAPPSFontTextStyleSubheadline1";
+NSString *const CAPPSFontTextStyleSubheadline2      = @"CAPPSFontTextStyleSubheadline2";
+NSString *const CAPPSFontTextStyleFootnote          = @"CAPPSFontTextStyleFootnote";
+NSString *const CAPPSFontTextStyleCaption1          = @"CAPPSFontTextStyleCaption1";
+NSString *const CAPPSFontTextStyleCaption2          = @"CAPPSFontTextStyleCaption2";
+
+@implementation UIFont (CAPPSAdditions)
+ 
++ (UIFont *)capps_preferredFontForTextStyle:(NSString *)textStyle
+{
+    if (!_mapping) {
+#if  __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
+        if (NSClassFromString(@"UIFontDescriptor")) {
+            _mapping = @{
+                         CAPPSFontTextStyleHeadline1: UIFontTextStyleHeadline1,
+                         CAPPSFontTextStyleHeadline2: UIFontTextStyleHeadline2,
+                         CAPPSFontTextStyleBody: UIFontTextStyleBody,
+                         CAPPSFontTextStyleSubheadline1: UIFontTextStyleSubheadline1,
+                         CAPPSFontTextStyleSubheadline2: UIFontTextStyleSubheadline2,
+                         CAPPSFontTextStyleFootnote: UIFontTextStyleFootnote,
+                         CAPPSFontTextStyleCaption1: UIFontTextStyleCaption1,
+                         CAPPSFontTextStyleCaption2: UIFontTextStyleCaption2,
+                         };
+        } else {
+            _mapping = @{};
+        }
+#else
+        _mapping = @{};
+#endif
+    }
+    if ([_mapping count] == 0) {
+        if (!_fontsMapping) {
+            _fontsMapping = @{}.mutableCopy;
+        }
+        UIFont *font = _fontsMapping[textStyle];
+        if (!font) {
+            if ([textStyle isEqualToString:CAPPSFontTextStyleHeadline1]) {
+                font = [UIFont fontWithName:CAPPSSystemFontMedium size:17];
+            } else if ([textStyle isEqualToString:CAPPSFontTextStyleHeadline2]) {
+                font = [UIFont fontWithName:CAPPSSystemFont size:17];
+            } else if ([textStyle isEqualToString:CAPPSFontTextStyleBody]) {
+                font = [UIFont fontWithName:CAPPSSystemFontLight size:17];
+            } else if ([textStyle isEqualToString:CAPPSFontTextStyleSubheadline1]) {
+                font = [UIFont fontWithName:CAPPSSystemFont size:15];
+            } else if ([textStyle isEqualToString:CAPPSFontTextStyleSubheadline2]) {
+                font = [UIFont fontWithName:CAPPSSystemFontLight size:15];
+            } else if ([textStyle isEqualToString:CAPPSFontTextStyleFootnote]) {
+                font = [UIFont fontWithName:CAPPSSystemFont size:13];
+            } else if ([textStyle isEqualToString:CAPPSFontTextStyleCaption1]) {
+                font = [UIFont fontWithName:CAPPSSystemFont size:12];
+            } else if ([textStyle isEqualToString:CAPPSFontTextStyleCaption2]) {
+                font = [UIFont fontWithName:CAPPSSystemFont size:11];
+            } else{
+                font = [UIFont systemFontOfSize:14];
+            }
+            _fontsMapping[textStyle] = font;
+        }
+        return font;
+    } else {
+#if  __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
+        return [self preferredFontForTextStyle:_mapping[textStyle]];
+#else
+        return nil;
+#endif
+    }
+    
+}
+
+
+@end
