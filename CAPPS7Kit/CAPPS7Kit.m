@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Cocoapps. All rights reserved.
 //
 
+#import "CAPPSKitMacros.h"
 #import "CAPPS7Kit.h"
 #import "UIFont+CAPPSAdditions.h"
 #import "UIImage+CAPPSAdditions.h"
 #import "UIView+CAPPSAdditions.h"
-#import "CAPPSKitMacros.h"
 #import <QuartzCore/QuartzCore.h>
 
 const CGFloat   CAPPS7KitUIControlRadius = 4.0f;
