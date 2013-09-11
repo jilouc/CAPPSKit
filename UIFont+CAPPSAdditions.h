@@ -9,11 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreText/CoreText.h>
 
-extern NSString *const CAPPSFontTextStyleHeadline1;
-extern NSString *const CAPPSFontTextStyleHeadline2;
+extern NSString *const CAPPSFontTextStyleHeadline;
 extern NSString *const CAPPSFontTextStyleBody;
-extern NSString *const CAPPSFontTextStyleSubheadline1;
-extern NSString *const CAPPSFontTextStyleSubheadline2;
+extern NSString *const CAPPSFontTextStyleSubheadline;
 extern NSString *const CAPPSFontTextStyleFootnote;
 extern NSString *const CAPPSFontTextStyleCaption1;
 extern NSString *const CAPPSFontTextStyleCaption2;

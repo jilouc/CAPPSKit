@@ -26,11 +26,9 @@ NSString *const CAPPSSystemFontLightItalic          = @"HelveticaNeue-LightItali
 NSString *const CAPPSSystemFontUltraLight           = @"HelveticaNeue-UltraLight";
 NSString *const CAPPSSystemFontUltraLightItalic     = @"HelveticaNeue-UltraLightItalic";
 
-NSString *const CAPPSFontTextStyleHeadline1         = @"CAPPSFontTextStyleHeadline1";
-NSString *const CAPPSFontTextStyleHeadline2         = @"CAPPSFontTextStyleHeadline2";
+NSString *const CAPPSFontTextStyleHeadline          = @"CAPPSFontTextStyleHeadline";
 NSString *const CAPPSFontTextStyleBody              = @"CAPPSFontTextStyleBody";
-NSString *const CAPPSFontTextStyleSubheadline1      = @"CAPPSFontTextStyleSubheadline1";
-NSString *const CAPPSFontTextStyleSubheadline2      = @"CAPPSFontTextStyleSubheadline2";
+NSString *const CAPPSFontTextStyleSubheadline       = @"CAPPSFontTextStyleSubheadline";
 NSString *const CAPPSFontTextStyleFootnote          = @"CAPPSFontTextStyleFootnote";
 NSString *const CAPPSFontTextStyleCaption1          = @"CAPPSFontTextStyleCaption1";
 NSString *const CAPPSFontTextStyleCaption2          = @"CAPPSFontTextStyleCaption2";
@@ -43,11 +41,9 @@ NSString *const CAPPSFontTextStyleCaption2          = @"CAPPSFontTextStyleCaptio
 #if  __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_6_1
         if (NSClassFromString(@"UIFontDescriptor")) {
             _mapping = @{
-                         CAPPSFontTextStyleHeadline1: UIFontTextStyleHeadline1,
-                         CAPPSFontTextStyleHeadline2: UIFontTextStyleHeadline2,
+                         CAPPSFontTextStyleHeadline: UIFontTextStyleHeadline,
                          CAPPSFontTextStyleBody: UIFontTextStyleBody,
-                         CAPPSFontTextStyleSubheadline1: UIFontTextStyleSubheadline1,
-                         CAPPSFontTextStyleSubheadline2: UIFontTextStyleSubheadline2,
+                         CAPPSFontTextStyleSubheadline: UIFontTextStyleSubheadline,
                          CAPPSFontTextStyleFootnote: UIFontTextStyleFootnote,
                          CAPPSFontTextStyleCaption1: UIFontTextStyleCaption1,
                          CAPPSFontTextStyleCaption2: UIFontTextStyleCaption2,
@@ -65,16 +61,12 @@ NSString *const CAPPSFontTextStyleCaption2          = @"CAPPSFontTextStyleCaptio
         }
         UIFont *font = _fontsMapping[textStyle];
         if (!font) {
-            if ([textStyle isEqualToString:CAPPSFontTextStyleHeadline1]) {
+            if ([textStyle isEqualToString:CAPPSFontTextStyleHeadline]) {
                 font = [UIFont fontWithName:CAPPSSystemFontMedium size:17];
-            } else if ([textStyle isEqualToString:CAPPSFontTextStyleHeadline2]) {
-                font = [UIFont fontWithName:CAPPSSystemFont size:17];
             } else if ([textStyle isEqualToString:CAPPSFontTextStyleBody]) {
                 font = [UIFont fontWithName:CAPPSSystemFontLight size:17];
-            } else if ([textStyle isEqualToString:CAPPSFontTextStyleSubheadline1]) {
+            } else if ([textStyle isEqualToString:CAPPSFontTextStyleSubheadline]) {
                 font = [UIFont fontWithName:CAPPSSystemFont size:15];
-            } else if ([textStyle isEqualToString:CAPPSFontTextStyleSubheadline2]) {
-                font = [UIFont fontWithName:CAPPSSystemFontLight size:15];
             } else if ([textStyle isEqualToString:CAPPSFontTextStyleFootnote]) {
                 font = [UIFont fontWithName:CAPPSSystemFont size:13];
             } else if ([textStyle isEqualToString:CAPPSFontTextStyleCaption1]) {
