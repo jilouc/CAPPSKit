@@ -17,14 +17,3 @@
 + (UIBarButtonItem *)backButtonItemWithTitle:(NSString *)title;
 
 @end
-
-@interface UIViewController (CAPPS7Kit)
-
-
-- (void)capps_setupScrollViewInsets:(UIScrollView *)scrollView withNavigationBar:(UINavigationBar *)navigationBar;
-- (void)capps_setupScrollViewInsets:(UIScrollView *)scrollView withNavigationBar:(UINavigationBar *)navigationBar additionalTopInset:(CGFloat)topInset;;
-- (void)capps_setupScrollViewInsets:(UIScrollView *)scrollView;
-- (CGFloat)capps_topInsetWithNavigationBar:(UINavigationBar *)navigationBar;
-- (CGFloat)capps_topInset;
-
-@end
