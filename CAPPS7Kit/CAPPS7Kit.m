@@ -77,8 +77,16 @@ const CGSize    CAPPS7KitUIControlRadiusSize = {4.0f, 4.0f};
                                                              style:UIBarButtonItemStylePlain
                                                             target:nil
                                                             action:nil];
+    
+    UIColor *tintColor = nil;
+    if ([UIWindow instancesRespondToSelector:@selector(setTintColor:)] && [UIApplication sharedApplication].keyWindow.tintColor != nil) {
+        tintColor = [UIApplication sharedApplication].keyWindow.tintColor;
+    } else {
+        tintColor = [CAPPS7Kit shared7Kit].tintColor;
+    }
+    
     [item setBackgroundImage:[[[UIImage imageNamed:@"CAPPS7Kit.bundle/CAPPSBack"]
-                               capps_imageWithOverlayColor:[CAPPS7Kit shared7Kit].tintColor]
+                               capps_imageWithOverlayColor:tintColor]
                               resizableImageWithCapInsets:UIEdgeInsetsMake(0, 9, 0, 0)]
                     forState:UIControlStateNormal
                   barMetrics:UIBarMetricsDefault];
