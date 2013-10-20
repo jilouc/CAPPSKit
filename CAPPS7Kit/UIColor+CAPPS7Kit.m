@@ -21,6 +21,11 @@
     return UIColorFromRGB(0x6d6d72);
 }
 
++ (instancetype)capps_tableViewSeparatorColor
+{
+    return UIColorFromRGB(0xc8c7cc);
+}
+
 + (instancetype)capps_systemRedColor
 {
     return [UIColor colorWithRed:1.0f green:0.22f blue:0.22f alpha:1.0f];

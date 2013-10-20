@@ -13,4 +13,6 @@
 - (void)capps_enumerateSubviewsWithBlock:(void(^)(UIView *subview, BOOL *stop))block
                                recursive:(BOOL)recursive;
 
+- (UIView *)capps_firstAscendantWithClass:(Class)klass;
+
 @end

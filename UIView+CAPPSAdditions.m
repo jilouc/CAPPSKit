@@ -28,4 +28,16 @@
     }
 }
 
+- (UIView *)capps_firstAscendantWithClass:(Class)klass
+{
+    UIView *view = self.superview;
+    while (view) {
+        if ([view isKindOfClass:klass]) {
+            return view;
+        }
+        view = view.superview;
+    }
+    return nil;
+}
+
 @end

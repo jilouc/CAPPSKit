@@ -12,6 +12,7 @@
 
 + (instancetype)capps_groupedTableViewBackgroundColor;
 + (instancetype)capps_tableViewSectionTitleColor;
++ (instancetype)capps_tableViewSeparatorColor;
 
 + (instancetype)capps_systemRedColor;
 + (instancetype)capps_systemOrangeColor;
