@@ -14,9 +14,12 @@ static NSMutableDictionary *_fontsMapping;
 NSString *const CAPPSSystemFont                     = @"HelveticaNeue";
 NSString *const CAPPSSystemFontFormat               = @"HelveticaNeue-%@";
 
+NSString *const CAPPSSystemFontFamily               = @"Helvetica Neue";
+
 NSString *const CAPPSSystemFontRegular              = @"HelveticaNeue";
 NSString *const CAPPSSystemFontBold                 = @"HelveticaNeue-Bold";
 NSString *const CAPPSSystemFontItalic               = @"HelveticaNeue-Italic";
+NSString *const CAPPSSystemFontMediumItalic         = @"HelveticaNeue-MediumItalic";
 NSString *const CAPPSSystemFontBoldItalic           = @"HelveticaNeue-BoldItalic";
 NSString *const CAPPSSystemFontMedium               = @"HelveticaNeue-Medium";
 NSString *const CAPPSSystemFontCondensedBold        = @"HelveticaNeue-CondensedBold";
@@ -25,6 +28,8 @@ NSString *const CAPPSSystemFontLight                = @"HelveticaNeue-Light";
 NSString *const CAPPSSystemFontLightItalic          = @"HelveticaNeue-LightItalic";
 NSString *const CAPPSSystemFontUltraLight           = @"HelveticaNeue-UltraLight";
 NSString *const CAPPSSystemFontUltraLightItalic     = @"HelveticaNeue-UltraLightItalic";
+NSString *const CAPPSSystemFontThin                 = @"HelveticaNeue-Thin";
+NSString *const CAPPSSystemFontThinItalic           = @"HelveticaNeue-ThinItalic";
 
 NSString *const CAPPSFontTextStyleHeadline          = @"CAPPSFontTextStyleHeadline";
 NSString *const CAPPSFontTextStyleBody              = @"CAPPSFontTextStyleBody";
@@ -33,8 +38,28 @@ NSString *const CAPPSFontTextStyleFootnote          = @"CAPPSFontTextStyleFootno
 NSString *const CAPPSFontTextStyleCaption1          = @"CAPPSFontTextStyleCaption1";
 NSString *const CAPPSFontTextStyleCaption2          = @"CAPPSFontTextStyleCaption2";
 
+
 @implementation UIFont (CAPPSAdditions)
- 
+
++ (UIFont *)capps_fontWithFamily:(NSString *)familyName size:(CGFloat)size traits:(UIFontDescriptorSymbolicTraits)traits
+{
+    UIFontDescriptor *fontDescriptor = [UIFontDescriptor fontDescriptorWithName:familyName size:size];
+    UIFontDescriptor *symbolicFontDescriptor = [fontDescriptor fontDescriptorWithSymbolicTraits:traits];
+    if (!symbolicFontDescriptor) {
+        return [UIFont fontWithDescriptor:fontDescriptor size:size];
+    }
+    return [UIFont fontWithDescriptor:symbolicFontDescriptor size:size];
+}
+
++ (UIFont *)capps_systemItalicFontOfSize:(CGFloat)size
+{
+    UIFont *font = [UIFont fontWithName:CAPPSSystemFontItalic size:size];
+    if (!font && NSClassFromString(@"UIFontDescriptor")) {
+        font = [self capps_fontWithFamily:CAPPSSystemFontFamily size:size traits:UIFontDescriptorTraitItalic];
+    }
+    return font;
+}
+
 + (UIFont *)capps_preferredFontForTextStyle:(NSString *)textStyle
 {
     if (!_mapping) {

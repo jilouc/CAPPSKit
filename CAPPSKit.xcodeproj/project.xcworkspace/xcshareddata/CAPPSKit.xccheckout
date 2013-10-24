@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8A8EFF38-EC02-44B1-A903-0720FCC03A84</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CAPPSKit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BEFEEB61-7A82-4B57-B46B-2F294AB5B66F</key>
+		<string>https://github.com/jilouc/CAPPSKit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CAPPSKit.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BEFEEB61-7A82-4B57-B46B-2F294AB5B66F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jilouc/CAPPSKit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BEFEEB61-7A82-4B57-B46B-2F294AB5B66F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BEFEEB61-7A82-4B57-B46B-2F294AB5B66F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CAPPSKit</string>
+		</dict>
+	</array>
+</dict>
+</plist>

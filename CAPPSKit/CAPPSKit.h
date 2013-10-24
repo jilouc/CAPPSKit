@@ -16,6 +16,7 @@
 #import "UIFont+CAPPSAdditions.h"
 #import "UIView+CAPPSAdditions.h"
 #import "UIWindow+CAPPSAdditions.h"
+#import "UIViewController+CAPPSAdditions.h"
 #import "CAPPS7Kit.h"
 
 #endif
