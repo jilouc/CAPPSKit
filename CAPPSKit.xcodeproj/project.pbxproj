@@ -30,6 +30,7 @@
 		DE50867C18196B98001502A2 /* UIView+CAPPSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50867118196B98001502A2 /* UIView+CAPPSAdditions.m */; };
 		DE50867D18196B98001502A2 /* UIWindow+CAPPSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50867318196B98001502A2 /* UIWindow+CAPPSAdditions.m */; };
 		DE50868018196EF5001502A2 /* UIViewController+CAPPSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50867F18196EF5001502A2 /* UIViewController+CAPPSAdditions.m */; };
+		DEEC02F51848ADA300A5DAA4 /* NSArray+CAPPSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DEEC02F41848ADA300A5DAA4 /* NSArray+CAPPSAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		DE50867318196B98001502A2 /* UIWindow+CAPPSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+CAPPSAdditions.m"; sourceTree = "<group>"; };
 		DE50867E18196EF5001502A2 /* UIViewController+CAPPSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CAPPSAdditions.h"; sourceTree = "<group>"; };
 		DE50867F18196EF5001502A2 /* UIViewController+CAPPSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CAPPSAdditions.m"; sourceTree = "<group>"; };
+		DEEC02F31848ADA300A5DAA4 /* NSArray+CAPPSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CAPPSAdditions.h"; sourceTree = "<group>"; };
+		DEEC02F41848ADA300A5DAA4 /* NSArray+CAPPSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CAPPSAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +224,8 @@
 				DE50867318196B98001502A2 /* UIWindow+CAPPSAdditions.m */,
 				DE50867E18196EF5001502A2 /* UIViewController+CAPPSAdditions.h */,
 				DE50867F18196EF5001502A2 /* UIViewController+CAPPSAdditions.m */,
+				DEEC02F31848ADA300A5DAA4 /* NSArray+CAPPSAdditions.h */,
+				DEEC02F41848ADA300A5DAA4 /* NSArray+CAPPSAdditions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				DE50867918196B98001502A2 /* UIFont+CAPPSAdditions.m in Sources */,
 				DE50867718196B98001502A2 /* NSString+CAPPSAdditions.m in Sources */,
 				DE50867B18196B98001502A2 /* UITableView+CAPPSAdditions.m in Sources */,
+				DEEC02F51848ADA300A5DAA4 /* NSArray+CAPPSAdditions.m in Sources */,
 				DE50868018196EF5001502A2 /* UIViewController+CAPPSAdditions.m in Sources */,
 				DE50867518196B98001502A2 /* CAPPS7Kit.m in Sources */,
 				DE50867A18196B98001502A2 /* UIImage+CAPPSAdditions.m in Sources */,

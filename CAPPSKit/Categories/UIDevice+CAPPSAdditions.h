@@ -48,5 +48,6 @@ typedef NS_ENUM(NSInteger, CAPPSDevicePlatform) {
 @interface UIDevice (CAPPSAdditions)
 
 - (NSUInteger)capps_platformType;
+- (NSString *)capps_platform;
 
 @end
